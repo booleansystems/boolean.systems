@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Github",
+    "link": "https://github.com/booleansystems",
+    "image": "images/social/github.svg"
+  },
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com/Boolean_Systems",
+    "image": "images/social/twitter.svg"
+  }
+]

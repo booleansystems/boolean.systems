@@ -1,0 +1,85 @@
+baseurl: '/'
+permalink: /post/:title
+
+# SEO
+title: 'Boolean Systems'
+timezone: America/Toronto
+seo_paginator_message: "%<current>s/%<total>s "
+url: "https://boolean.systems"
+tagline: Managed IT and Consulting Services
+description: Boolean Systems is an IT services company serving the Ottawa-Gatineau region, providing managed IT and consulting services.
+twitter:
+  username: Boolean_Systems
+  card: summary
+social:
+  name: Boolean Systems
+  links:
+    - https://github.com/booleansystems
+    - https://twitter.com/Boolean_Systems
+
+
+logo : "/images/logo/boolean.svg"
+custom_logo:
+  mobile: "/images/logo/boolean-mobile.svg"
+  #mobile_height: "70px"
+  #mobile_width: "200px"
+  desktop: "/images/logo/boolean.svg"
+  desktop_height: "50px"
+  desktop_width: "150px"
+
+# Blog Settings
+paginate: 6
+paginate_path: "/blog/:num/"
+related_posts_section:
+  max_count:        5
+  min_common_tags:  1
+
+home: 
+  limit_services: 6
+
+collections:
+  services:
+    output: true
+    sort_by: weight
+  team:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+      excerpt_separator: <!--more-->
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      toc: true
+  - scope:
+      path: ""
+    values:
+      image: "/images/logo/boolean_card.jpg"
+
+sass:
+  style: compressed # possible values: nested expanded compact compressed
+
+plugins:
+  - jekyll-environment-variables
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-toc
+  - jekyll-last-modified-at
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md
